@@ -1,7 +1,7 @@
 /**
  * TODO FOR HOMEWORK - BaseShape.java
- *      [ ] Create a valid and logical constructor
- *      [ ] Create all logical 'Setter' method and have each method's 'scope' correct
+ *      [X] Create a valid and logical constructor
+ *      [X] Create all logical 'Setter' method and have each method's 'scope' correct
  */
 public abstract class BaseShape {
     /**
@@ -27,6 +27,9 @@ public abstract class BaseShape {
      * @param height The height of the shape
      */
     public BaseShape(String shapeName, double length, double height) {
+        this.setShapeName(shapeName);
+        this.setLength(length);
+        this.setHeight(height);
     }
 
     /**
@@ -55,6 +58,23 @@ public abstract class BaseShape {
 
     // TODO FOR HOMEWORK: Create Setters for each of the above properties of BaseShape and make sure the scope is correct
 
+    /**
+     * Sets the shape name
+     * @param shapeName The shape name
+     */
+    protected void setShapeName(String shapeName) { this.shapeName = shapeName;}
+
+    /**
+     * Sets the length
+     * @param length The length
+     */
+    protected void setLength(double length) { this.length = length;}
+
+    /**
+     * Sets the height
+     * @param height The height
+     */
+    protected void setHeight(double height) { this.height = height;}
     /**
      * Returns the area of the shape
      * @return The area

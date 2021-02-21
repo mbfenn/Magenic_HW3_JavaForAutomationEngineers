@@ -1,65 +1,72 @@
 TODO HOMEWORK CHECKLIST:
 PROGRAMMING TASKS
     BaseShape.java
-        [ ] Create a valid and logical constructor
-        [ ] Create all logical 'Setter' methods and have each method's 'scope' correct
+        [X] Create a valid and logical constructor
+        [X] Create all logical 'Setter' methods and have each method's 'scope' correct
     Rectangle.java
-        [ ] Update this class to inherit from BaseShape.java
-        [ ] Update to a valid and logical constructor
-        [ ] Add a static main method
+        [X] Update this class to inherit from BaseShape.java
+        [X] Update to a valid and logical constructor
+        [X] Add a static main method
     EquilateralTriangle.java
-        [ ] Update this class to inherit from BaseShape.java
-        [ ] Update to a valid and logical constructor
-        [ ] Override the area method
-        [ ] Override the perimeter method
-        [ ] Add a static main method
+        [X] Update this class to inherit from BaseShape.java
+        [X] Update to a valid and logical constructor
+        [X] Override the area method
+        [X] Override the perimeter method
+        [X] Add a static main method
     SquareTest.java, Rectangle.java and EquilateralTriangleTest.java
-        [ ] Uncomment any code, now that the shape classes are complete.
-        [ ] Run all tests
+        [X] Uncomment any code, now that the shape classes are complete.
+        [X] Run all tests
     ShapeFactory.java
-        [ ] Uncomment any marked code in both CreateShape methods
+        [X] Uncomment any marked code in both CreateShape methods
     ShapeTests.java
-        [ ] Run all tests
+        [X] Run all tests
 
  SHORT ANSWERS
     // TODO FOR HOMEWORK: Answer each question, and note many don't have a 'right answer' so just answer honestly
     [ ] What is the purpose of a constructor
-         ANSWER HERE:
+         ANSWER HERE: Used to define an instance of a class
 
     [ ] This project uses 'inheritance' for each shape, since they all have 'BaseShape' as their parent.
         In your own words define what you believe 'inheritance' means.
-        ANSWER HERE:
+        ANSWER HERE: Inheritance means having a super-class that contains commonalities between the children classes,
+        to cut down on redundant code.
 
     [ ] Research the concept of 'Object Oriented Programming (OOP)', and write down the 4 principles of 'OOP'.
         ANSWER HERE:
-            1)
-            2)
-            3)
-            4)
+            1)Encapsulation
+            2)Abstraction
+            3)Inheritance
+            4)Polymorphism
 
     [ ] What are some advantages of 'inheritance'
-        ANSWER HERE:
+        ANSWER HERE: You can code something once in the superclass, then use it everywhere. This lessens the chance of accidentally
+        introducing a bug in a repeated method definition.
 
     [ ] In the ShapeFactory.java class, there are two methods both called CreateShape.
         One method takes in 3 parameters - Shape Name, length and height
         One method takes in 2 parameters - Shape Name and length
 
         This concept is called 'polymorphism', research 'polymorphism' and write below why Factory used 'polymorphism'
-        ANSWER HERE:
+        ANSWER HERE: This is 'static' polymorphism, because we are overloading the CreateShape method.
 
     [ ] Does this project ever cover the concept of 'Abstraction'? If yes, how so?
-        ANSWER HERE:
+        ANSWER HERE: Yes, it seems like ShapeFactory is an abstract class. It doesn't have any constructors, but
+        rather is just used to create BaseShape objects.
 
     [ ] Does this project ever cover the concept of 'Encapsulation'? If yes, how so?
-        ANSWER HERE:
+        ANSWER HERE: Yes. Object parameters are made private, but there are getters and setters that are more widely available to
+        other parts of the code.
 
     [ ] Why did you need to 'override' the 'area' and 'perimeter' methods in 'EquilateralTriangle.java' but not the
         'Square.java' and 'Rectangle.java'?
-        ANSWER HERE:
+        ANSWER HERE: Squares and rectangles both can use the area formula defined in BaseShape - length * height.
+        Triangles have a different area formula, so the ET class couldn't use the method from the superclass.
 
     [ ] We made 'ShapeTests' differently than we did 'SquareTest', 'RectangleTest' and 'EquilateralTriangleTest'
         A unit test is testing a single unit and generally that means by classes in java.
         'SquareTest', 'RectangleTest' and 'EquilateralTriangleTest' are all unit tests.
         'ShapeTests' was testing with each shape as a generic 'BaseShape' instead of the previous shape classes.
         Is 'ShapeTests' a unit test of 'ShapeFactory.java'?
-        ANSWER HERE:
+        ANSWER HERE: Yes. Though ShapeFactory does not have any means of instantiation, ShapeTests does test
+        the output of ShapeFactory. It tests a single unit at a time, but the unit can change depending
+        on the parameters given.
